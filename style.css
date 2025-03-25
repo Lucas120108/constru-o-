@@ -1,63 +1,26 @@
-body {
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
 }
 
-header {
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    flex-direction: column;
+    display: none; /* Inicialmente escondido */
 }
 
-nav button {
-    margin-left: 10px;
-    cursor: pointer;
+.opcoes-acessibilidade.apresenta-lista {
+    display: flex; /* Mostra as opções quando a classe 'apresenta-lista' é adicionada */
 }
 
-section {
-    margin: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.alto-contraste {
-    background-color: black;
-    color: yellow;
-}
-body {
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-nav button {
-    margin-left: 10px;
-    cursor: pointer;
-    padding: 8px 12px; /* Adiciona padding para melhor aparência do botão */
-    border: 1px solid #ccc; /* Adiciona uma borda */
-    border-radius: 4px; /* Arredonda os cantos */
-}
-
-section {
-    margin: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-body.alto-contraste { /* Ajuste no seletor CSS */
-    background-color: black;
-    color: yellow;
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
 }
