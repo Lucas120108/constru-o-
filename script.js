@@ -14,3 +14,9 @@ diminuirFonte.addEventListener('click', () => {
 altoContraste.addEventListener('click', () => {
     body.classList.toggle('alto-contraste');
 });
+const altoContrasteBtn = document.getElementById('altoContrasteBtn');
+const body = document.body;
+
+altoContrasteBtn.addEventListener('click', () => {
+    body.classList.toggle('alto-contraste'); // Alterna a classe no body
+});
