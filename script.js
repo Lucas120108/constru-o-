@@ -1,22 +1,18 @@
 const body = document.querySelector('body');
 const aumentarFonte = document.getElementById('aumentar-fonte');
 const diminuirFonte = document.getElementById('diminuir-fonte');
-const altoContraste = document.getElementById('alto-contraste');
+const altoContrasteBtn = document.getElementById('alto-contraste'); // Corrigido o ID
 
 aumentarFonte.addEventListener('click', () => {
-    body.style.fontSize = parseInt(window.getComputedStyle(body).fontSize) + 2 + 'px';
+    const currentFontSize = parseInt(window.getComputedStyle(body).fontSize);
+    body.style.fontSize = (currentFontSize + 2) + 'px';
 });
 
 diminuirFonte.addEventListener('click', () => {
-    body.style.fontSize = parseInt(window.getComputedStyle(body).fontSize) - 2 + 'px';
+    const currentFontSize = parseInt(window.getComputedStyle(body).fontSize);
+    body.style.fontSize = (currentFontSize - 2) + 'px';
 });
-
-altoContraste.addEventListener('click', () => {
-    body.classList.toggle('alto-contraste');
-});
-const altoContrasteBtn = document.getElementById('altoContrasteBtn');
-const body = document.body;
 
 altoContrasteBtn.addEventListener('click', () => {
-    body.classList.toggle('alto-contraste'); // Alterna a classe no body
+    body.classList.toggle('alto-contraste');
 });
